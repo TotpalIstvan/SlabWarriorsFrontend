@@ -1,2 +1,2 @@
-# Webes alkalmazás a projektünkhöz
-Majd később több is lesz itt!
+# The Web App for the project
+There will be additional commits as we move forward!
