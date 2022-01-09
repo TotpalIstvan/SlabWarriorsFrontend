@@ -23,9 +23,15 @@ function App() {
     <Form.Label>Jelszó:</Form.Label>
     <Form.Control type="password" placeholder="Írj be egy jelszót!" />
   </Form.Group>
+
+  <Form.Group className="mb-3" controlId="formBasicPassword">
+    <Form.Label>Születési dátum:</Form.Label>
+    <Form.Control type="date" placeholder="Születési év" />
+  </Form.Group>
   
-  <Button variant="primary" type="submit">
-    Bejelentkezés
+  <Button variant="primary">
+    
+    <span>Bejelentkezés</span>
   </Button>
 </Form>
       
