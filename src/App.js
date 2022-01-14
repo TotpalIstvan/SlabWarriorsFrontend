@@ -1,40 +1,36 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import  Navbar  from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import  NavDropdown  from 'react-bootstrap/NavDropdown';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
+
   return (
     <div className="App">
-      
-      <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>Felhasználónév:</Form.Label>
-    <Form.Control type="text" placeholder="Írj be egy felhasználó nevet!" />
-  </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>Email cím:</Form.Label>
-    <Form.Control type="email" placeholder="Írj be egy email címet!" />
-  </Form.Group>
-
-  <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Jelszó:</Form.Label>
-    <Form.Control type="password" placeholder="Írj be egy jelszót!" />
-  </Form.Group>
-
-  <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Születési dátum:</Form.Label>
-    <Form.Control type="date" placeholder="Születési év" />
-  </Form.Group>
-  
-  <Button variant="primary">
-    
-    <span>Bejelentkezés</span>
-  </Button>
-</Form>
-      
+      <Navbar bg="dark" variant="dark">
+      <Navbar.Toggle aria-controls="navbarScroll" />
+    <Navbar.Collapse id="navbarScroll">
+      <Nav
+        className="me-auto my-2 my-lg-0"
+        style={{ maxHeight: '100px' }}
+        navbarScroll
+      >
+        <NavDropdown bg="dark" title="Hírek" id="navbarScrollingDropdown">
+            <NavDropdown.Item href="#">Frissítések</NavDropdown.Item>
+            <NavDropdown.Item href="#">Featured</NavDropdown.Item>
+        </NavDropdown>
+            <Nav.Link href="#">Regisztráció</Nav.Link>
+            <Nav.Link href="#">Játékleírás</Nav.Link>
+            <Nav.Link href="#">Ranglista</Nav.Link>
+            <Nav.Link href="#">Fórum</Nav.Link>
+            <Nav.Link href="#">Deck Ajánló</Nav.Link>
+            </Nav>
+            </Navbar.Collapse>
+    </Navbar>
     </div>
   );
 }
