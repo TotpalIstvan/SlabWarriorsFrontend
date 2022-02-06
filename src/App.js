@@ -18,16 +18,16 @@ function App() {
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Nav.Link href='MainPage.js' active>Főoldal</Nav.Link>
+        <Nav.Link to='/MainPage.js' active>Főoldal</Nav.Link>
         <NavDropdown bg="dark" title="Hírek" id="navbarScrollingDropdown">
             <NavDropdown.Item href="">Frissítések</NavDropdown.Item>
             <NavDropdown.Item href="">Featured</NavDropdown.Item>
         </NavDropdown>
-            <Nav.Link href="Registration.js">Regisztráció</Nav.Link>
-            <Nav.Link href="gameDescription.js">Játékleírás</Nav.Link>
-            <Nav.Link href="Leaderboard.js">Ranglista</Nav.Link>
-            <Nav.Link href="MainPage.js">Fórum</Nav.Link>
-            <Nav.Link href="deckRecommendation.js">Deck Ajánló</Nav.Link>
+            <Nav.Link to="/Registration.js">Regisztráció</Nav.Link>
+            <Nav.Link to="/gameDescription.js">Játékleírás</Nav.Link>
+            <Nav.Link to="/Leaderboard.js">Ranglista</Nav.Link>
+            <Nav.Link to="/MainPage.js">Fórum</Nav.Link>
+            <Nav.Link to="/deckRecommendation.js">Deck Ajánló</Nav.Link>
             </Nav>
             </Navbar.Collapse>
     </Navbar>
