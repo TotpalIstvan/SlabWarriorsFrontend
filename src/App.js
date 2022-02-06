@@ -11,7 +11,6 @@ function App() {
   return (
     <div className="App">
       <Navbar bg="dark" variant="dark">
-      <Nav.Link href="#">Főoldal</Nav.Link>
       <Navbar.Toggle aria-controls="navbarScroll" />
     <Navbar.Collapse id="navbarScroll">
       <Nav
