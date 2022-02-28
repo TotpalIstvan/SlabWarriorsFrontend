@@ -1,10 +1,11 @@
-import React from 'react';
-import Form  from 'react-bootstrap/Form';
+import React, { Component } from 'react';
+import { Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-function Form() {
+
+export function Form()  {
     return(
 <div>
 <Form>
