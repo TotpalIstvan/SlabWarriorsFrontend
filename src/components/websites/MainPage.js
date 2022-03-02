@@ -23,14 +23,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
             <NavDropdown.Item href="#">Frissítések</NavDropdown.Item>
             <NavDropdown.Item href="#">Featured</NavDropdown.Item>
         </NavDropdown>
-            <Nav.Link href="Registration.js">Regisztráció</Nav.Link>
-            <Nav.Link href="#">Játékleírás</Nav.Link>
-            <Nav.Link href="#">Ranglista</Nav.Link>
-            <Nav.Link href="#">Fórum</Nav.Link>
-            <Nav.Link href="#">Deck Ajánló</Nav.Link>
+        
+            <Nav.Link href='#'>Regisztráció</Nav.Link>
+            
+            <Nav.Link href='#'>Játékleírás</Nav.Link>
+            <Nav.Link href='#'>Ranglista</Nav.Link>
+            <Nav.Link href='#'>Fórum</Nav.Link>
+            <Nav.Link href='#'>Deck Ajánló</Nav.Link>
             </Nav>
             </Navbar.Collapse>
     </Navbar>
+
+
     </div>
   );
 }

@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-export function Form()  {
+export function Registration()  {
     return(
 <div>
 <Form>
@@ -28,12 +28,10 @@ export function Form()  {
     <Form.Control type="date" placeholder="Születési év" />
   </Form.Group>
   
-  <Button variant="primary">
-    
-    <span>Bejelentkezés</span>
-  </Button>
+ 
 </Form>
 </div>
     );
-    export default Form;
+    
 }
+export default Registration;
