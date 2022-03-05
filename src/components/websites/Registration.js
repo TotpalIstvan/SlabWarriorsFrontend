@@ -5,12 +5,10 @@ import Header from './Header';
 
 
 
-<<<<<<< HEAD
-export function Registration()   {
-=======
+
 
 export function Registration()  {
->>>>>>> b647053d682fd3df90b0de84a5b8700d20b71d05
+
     return(
 <div>
   <Header />
@@ -34,19 +32,17 @@ export function Registration()  {
     <Form.Control type="date" placeholder="Születési év" />
   </Form.Group>
   
-<<<<<<< HEAD
+
   
   <input type="submit" value="Bejelentkezés"></input>
 </Form>
 </div>
     );
    
-=======
+
  
-</Form>
-</div>
-    );
->>>>>>> b647053d682fd3df90b0de84a5b8700d20b71d05
+
+
     
 }
 export default Registration;

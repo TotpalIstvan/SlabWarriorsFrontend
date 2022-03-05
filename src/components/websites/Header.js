@@ -25,21 +25,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
             <NavDropdown.Item href="#">Frissítések</NavDropdown.Item>
             <NavDropdown.Item href="#">Featured</NavDropdown.Item>
         </NavDropdown>
-<<<<<<< HEAD:src/components/websites/Header.js
             <Nav.Link href="Registration.js">Regisztráció</Nav.Link>
             <Nav.Link href="gameDescription.js">Játékleírás</Nav.Link>
             <Nav.Link href="Leaderboard.js">Ranglista</Nav.Link>
             <Nav.Link href="Forum.js">Fórum</Nav.Link>
             <Nav.Link href="deckRecommendation.js">Deck Ajánló</Nav.Link>
-=======
-        
-            <Nav.Link href='#'>Regisztráció</Nav.Link>
-            
-            <Nav.Link href='#'>Játékleírás</Nav.Link>
-            <Nav.Link href='#'>Ranglista</Nav.Link>
-            <Nav.Link href='#'>Fórum</Nav.Link>
-            <Nav.Link href='#'>Deck Ajánló</Nav.Link>
->>>>>>> b647053d682fd3df90b0de84a5b8700d20b71d05:src/components/websites/MainPage.js
+
             </Nav>
             </Navbar.Collapse>
     </Navbar>
