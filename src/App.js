@@ -1,16 +1,16 @@
 import React from 'react';
-import MainPage from './components/websites/MainPage';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Registration from './components/websites/Registration';
+
 
 
 function App() {
 
   return (
     <div className="App">
-      <p>Szöveg</p>
-     {MainPage}
      
+     <Registration />
     </div>
   );
 }

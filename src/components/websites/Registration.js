@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
-import { Form } from 'react-bootstrap';
+import React from 'react';
+import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Header';
 
 
 
-
-export function Form()  {
+export function Registration()   {
     return(
 <div>
+  <Header />
 <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Felhasználónév:</Form.Label>
@@ -28,12 +29,12 @@ export function Form()  {
     <Form.Control type="date" placeholder="Születési év" />
   </Form.Group>
   
-  <Button variant="primary">
-    
-    <span>Bejelentkezés</span>
-  </Button>
+  
+  <input type="submit" value="Bejelentkezés"></input>
 </Form>
 </div>
     );
-    export default Form;
+   
+    
 }
+export default Registration;
