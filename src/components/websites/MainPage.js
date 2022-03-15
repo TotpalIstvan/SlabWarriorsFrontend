@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
 
-export function Leaderboard()  {
+export function MainPage()  {
 
     return(
 <div>
@@ -17,4 +17,4 @@ export function Leaderboard()  {
 
     
 }
-export default Leaderboard;
+export default MainPage;
