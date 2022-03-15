@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Header';
+
 
 
 
@@ -11,7 +11,7 @@ export function Registration()  {
 
     return(
 <div>
-  <Header />
+  
 <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Felhasználónév:</Form.Label>
