@@ -2,7 +2,7 @@ import React from 'react';
 import  Navbar  from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import  NavDropdown  from 'react-bootstrap/NavDropdown';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -20,7 +20,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
-        <Link to="/Mainpage">
+        <Link to="/MainPage">
          <Nav.Link href="Mainpage.js">Főoldal</Nav.Link>
          </Link>
         <NavDropdown bg="dark" title="Hírek" id="navbarScrollingDropdown">
@@ -38,7 +38,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
             </Nav>
             </Navbar.Collapse>
     </Navbar>
-    <Outlet />
+    
 
     </div>
   );

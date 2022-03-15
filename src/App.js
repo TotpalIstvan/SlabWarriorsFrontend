@@ -18,7 +18,7 @@ function App() {
 
 <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Header />}>
+        <Route exact path="/" element={<Header />}>
         <Route index element={<MainPage />} />
           <Route path="Registration" element={<Registration />} />
           <Route path="gameDescription" element={<gameDescription/>} />1
@@ -28,6 +28,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    
     </div>
   );
 }
