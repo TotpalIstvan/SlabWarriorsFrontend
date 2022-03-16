@@ -5,9 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Registration from './components/websites/Registration';
 import  MainPage  from './components/websites/MainPage';
 import Leaderboard from './components/websites/Leaderboard';
-import gameDescription from './components/websites/gameDescription';
 import Forum from './components/websites/Forum';
-import deckRecommendation from './components/websites/deckRecommendation';
+import DeckRecommendation from './components/websites/DeckRecommendation';
+import GameDescription from './components/websites/GameDescription';
 import Header from './components/websites/Header';
 
 
@@ -22,10 +22,10 @@ function App() {
         <Route index element={<MainPage />} />
           <Route path="MainPage" element={<MainPage />} />
           <Route path="Registration" element={<Registration />} />
-          <Route path="gameDescription" element={<gameDescription/>} />1
+          <Route path="GameDescription" element={<GameDescription />} />1
           <Route path="Leaderboard" element={<Leaderboard />} />
           <Route path="Forum" element={<Forum />} />
-          <Route path="deckRecommendation" element={<deckRecommendation />} />
+          <Route path="DeckRecommendation" element={<DeckRecommendation />} />
         </Route>
       </Routes>
     </BrowserRouter>
