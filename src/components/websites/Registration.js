@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -34,7 +35,9 @@ export function Registration()  {
   
 
   
-  <input type="submit" value="Bejelentkezés"></input>
+  <Button variant="primary" type="submit">
+    Bejelentkezés
+  </Button>
 </Form>
 </div>
     );
