@@ -1,12 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Header';
 
-export function deckRecommendation()  {
+
+export function DeckRecommendation()  {
 
     return(
 <div>
-  <Header />
+ 
 
 </div>
     );
@@ -17,4 +17,4 @@ export function deckRecommendation()  {
 
     
 }
-export default deckRecommendation;
+export default DeckRecommendation;

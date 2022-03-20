@@ -1,12 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Header';
 
-export function gameDescription()  {
+
+export function GameDescription()  {
 
     return(
 <div>
-  <Header />
+  
+
 
 </div>
     );
@@ -17,4 +18,4 @@ export function gameDescription()  {
 
     
 }
-export default gameDescription;
+export default GameDescription;
