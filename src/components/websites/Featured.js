@@ -4,11 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-export function MainPage()  {
+export function Featured()  {
 
     return(
-<div className='MainPage'>
-  
+<div className='Featured'>
 
 </div>
 
@@ -20,4 +19,4 @@ export function MainPage()  {
 
     
 }
-export default MainPage;
+export default Featured;

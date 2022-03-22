@@ -4,12 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-export function MainPage()  {
+
+export function Updates()  {
 
     return(
-<div className='MainPage'>
+<div className='Updates'>
   
-
 </div>
 
     );
@@ -20,4 +20,4 @@ export function MainPage()  {
 
     
 }
-export default MainPage;
+export default Updates;
