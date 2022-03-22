@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export function Registration()  {
 
     return(
-<div>
+<div className='Registration'>
   
 <Form>
       <Form.Group className="mb-3" controlId="formBasicEmail">

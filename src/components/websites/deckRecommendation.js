@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export function DeckRecommendation()  {
 
     return(
-<div>
+<div className='DeckRecommendation'>
  
 
 </div>

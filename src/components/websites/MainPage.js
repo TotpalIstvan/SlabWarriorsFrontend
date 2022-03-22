@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export function MainPage()  {
 
     return(
-<div>
+<div className='MainPage'>
   
 
 </div>
