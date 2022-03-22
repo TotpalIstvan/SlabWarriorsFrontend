@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Registration from './components/websites/Registration';
 import  MainPage  from './components/websites/MainPage';
@@ -9,6 +9,10 @@ import Forum from './components/websites/Forum';
 import DeckRecommendation from './components/websites/DeckRecommendation';
 import GameDescription from './components/websites/GameDescription';
 import Header from './components/websites/Header';
+import Footer from './components/websites/Footer';
+import Featured from './components/websites/Featured';
+import Updates from './components/websites/Updates';
+
 
 
 function App() {
@@ -20,7 +24,9 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Header />}>
         <Route index element={<MainPage />} />
-          <Route path="MainPage" element={<MainPage />} />
+          <Route path="MainPage" element={<MainPage />} /> 
+          <Route path="Featured" element={<Featured/>} />
+          <Route path="Updates" element={<Updates />} />  
           <Route path="Registration" element={<Registration />} />
           <Route path="GameDescription" element={<GameDescription />} />1
           <Route path="Leaderboard" element={<Leaderboard />} />

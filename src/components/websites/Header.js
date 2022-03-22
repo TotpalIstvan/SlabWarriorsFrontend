@@ -24,8 +24,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
          <Nav.Link href='MainPage.js'>Főoldal</Nav.Link>
          </Link>
         <NavDropdown bg="dark" title="Hírek" id="navbarScrollingDropdown">
-            <NavDropdown.Item href="#">Frissítések</NavDropdown.Item>
-            <NavDropdown.Item href="#">Featured</NavDropdown.Item>
+            <Link to="/Updates">
+            <NavDropdown.Item href="Updates.js">Frissítések</NavDropdown.Item>
+            </Link>
+            <Link to="/Featured">
+            <NavDropdown.Item href="Featured.js">Featured</NavDropdown.Item>
+            </Link>
         </NavDropdown>
         <Link to="/Registration">
             <Nav.Link href="Registration.js">Regisztráció</Nav.Link>

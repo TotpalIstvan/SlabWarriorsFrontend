@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export function Forum()  {
 
     return(
-<div>
+<div className='Forum'>
   
 
 </div>
