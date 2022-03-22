@@ -21,30 +21,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
         navbarScroll
       >
         <Link to="/MainPage">
-         <Nav.Link href='MainPage.js'>Főoldal</Nav.Link>
+         <Nav.Link href='MainPage.js' to="/MainPage">Főoldal</Nav.Link>
          </Link>
         <NavDropdown bg="dark" title="Hírek" id="navbarScrollingDropdown">
             <Link to="/Updates">
-            <NavDropdown.Item href="Updates.js">Frissítések</NavDropdown.Item>
+            <NavDropdown.Item href="Updates.js" to="/Updates">Frissítések</NavDropdown.Item>
             </Link>
             <Link to="/Featured">
-            <NavDropdown.Item href="Featured.js">Featured</NavDropdown.Item>
+            <NavDropdown.Item href="Featured.js" to="/Featured">Featured</NavDropdown.Item>
             </Link>
         </NavDropdown>
         <Link to="/Registration">
-            <Nav.Link href="Registration.js">Regisztráció</Nav.Link>
+            <Nav.Link href="Registration.js" to="/Registration">Regisztráció</Nav.Link>
             </Link>
-            <Link to="/gameDescription">
-            <Nav.Link href="gameDescription.js">Játékleírás</Nav.Link>
+            <Link to="/GameDescription">
+            <Nav.Link href="GameDescription.js" to="/GameDescription">Játékleírás</Nav.Link>
             </Link>
             <Link to="/Leaderboard">
-            <Nav.Link href="Leaderboard.js">Ranglista</Nav.Link>
+            <Nav.Link href="Leaderboard.js" to="/Leaderboard">Ranglista</Nav.Link>
             </Link>
             <Link to="/Forum">
-            <Nav.Link href="Forum.js">Fórum</Nav.Link>
+            <Nav.Link href="Forum.js" to="/Forum">Fórum</Nav.Link>
             </Link>
-            <Link to="/deckRecommendation">
-            <Nav.Link href="deckRecommendation.js">Deck Ajánló</Nav.Link>
+            <Link to="/DeckRecommendation">
+            <Nav.Link href="DeckRecommendation.js" to="/DeckRecommendation">Deck Ajánló</Nav.Link>
             </Link>
             </Nav>
             </Navbar.Collapse>
