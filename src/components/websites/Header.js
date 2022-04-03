@@ -2,8 +2,9 @@ import React from 'react';
 import  Navbar  from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import  NavDropdown  from 'react-bootstrap/NavDropdown';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Header.scss'
 
 
 
@@ -11,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
   return (
     <div className='Header'>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" id='Navbar'>
        <Navbar.Toggle aria-controls="navbarScroll" />
      
     <Navbar.Collapse id="navbarScroll">
@@ -20,6 +21,31 @@ import 'bootstrap/dist/css/bootstrap.min.css';
         style={{ maxHeight: '100px' }}
         navbarScroll
       >
+<<<<<<< HEAD
+        
+         <Nav.Link href='MainPage' to="/MainPage">Main Page</Nav.Link>
+         
+        <NavDropdown bg="dark" title="News" id="navbarScrollingDropdown">
+            
+            <NavDropdown.Item href="Updates" to="/Updates">Updates</NavDropdown.Item>
+            
+            
+            <NavDropdown.Item href="Featured" to="/Featured">Featured</NavDropdown.Item>
+            
+        </NavDropdown>
+        
+            <Nav.Link href="Registration" to="/Registration">Registration</Nav.Link>
+            <Nav.Link href="Login" to="/Login">Login</Nav.Link>
+           
+            <Nav.Link href="GameDescription" to="/GameDescription">Game Description</Nav.Link>
+            
+            <Nav.Link href="Leaderboard" to="/Leaderboard">Leaderboard</Nav.Link>
+            
+            <Nav.Link href="Forum" to="/Forum">Forum</Nav.Link>
+            
+            <Nav.Link href="DeckRecommendation" to="/DeckRecommendation">Deck Recommender</Nav.Link>
+            
+=======
         <Link to="/MainPage">
          <Nav.Link href='MainPage.js' to="/MainPage">Főoldal</Nav.Link>
          </Link>
@@ -46,6 +72,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
             <Link to="/DeckRecommendation">
             <Nav.Link href="DeckRecommendation.js" to="/DeckRecommendation">Deck Ajánló</Nav.Link>
             </Link>
+>>>>>>> parent of 5492b85 (Footer +  api csatlakozás megkezdése)
             </Nav>
             </Navbar.Collapse>
     </Navbar>
