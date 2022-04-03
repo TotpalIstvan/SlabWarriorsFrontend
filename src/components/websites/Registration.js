@@ -53,26 +53,7 @@ export function Registration()  {
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label className='labelok'>Password Confirmation:</Form.Label>
     <Form.Control type="password" placeholder="write your password again!"   onChange={(e) => setPassword(e.target.value)} value={password}/>
-=======
-    <Form.Label>Felhasználónév:</Form.Label>
-    <Form.Control type="text" placeholder="Írj be egy felhasználó nevet!" />
   </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicEmail">
-    <Form.Label>Email cím:</Form.Label>
-    <Form.Control type="email" placeholder="Írj be egy email címet!" />
-  </Form.Group>
-
-  <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label>Jelszó:</Form.Label>
-    <Form.Control type="password" placeholder="Írj be egy jelszót!" />
-
-  </Form.Group>
-
-  <Form.Group className="mb-3" controlId="formBasicPassword">
-    <Form.Label className='labelok'>BirthDate:</Form.Label>
-    <Form.Control type="date" />
-  </Form.Group>
-  
 
   
 
