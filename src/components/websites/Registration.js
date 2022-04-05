@@ -52,9 +52,6 @@ export function Registration()  {
   <Form.Group className="mb-3" controlId="EmailField" required>
     <Form.Label className='labelok'>Email address:</Form.Label>
     <Form.Control type="email" placeholder="write an email!" value={email}    onChange={(e) => setEmail(e.target.value)}/>
-    <Form.Control.Feedback type="invalid">
-   
-  </Form.Control.Feedback>
   </Form.Group>
 
 
@@ -62,9 +59,6 @@ export function Registration()  {
   <Form.Group className="mb-3" controlId="PasswordField" required>
     <Form.Label className='labelok'>Password:</Form.Label>
     <Form.Control type="password" placeholder="write a password!"   onChange={(e) => setPassword(e.target.value)} value={password}/>
-    <Form.Control.Feedback type="invalid">
-  
-  </Form.Control.Feedback>
   </Form.Group>
 
 
