@@ -7,15 +7,18 @@ import './Registration.scss';
 
 
 
-
 export function Registration()  {
+
+
+
 
   const [name,setName]=useState("");
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
+  const [password_confirm,setPasswordConfirmation]=useState("");
 
   async function signUp() {
-    let item = {name, password, email};
+    let item = {name, email, password, password_confirm};
     console.warn(item);
 
   let result = await fetch("http://localhost:8000/api/users/register", 
@@ -48,11 +51,11 @@ export function Registration()  {
 
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label className='labelok'>Password:</Form.Label>
-    <Form.Control type="password" placeholder="write a password!"   onChange={(e) => setPassword(e.target.value)} value={password}/>
+    <Form.Control type="password" placeholder="write a password!"   onChange={(e) =>setPassword(e.target.value)} value={password}/>
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicPassword">
     <Form.Label className='labelok'>Password Confirmation:</Form.Label>
-    <Form.Control type="password" placeholder="write your password again!"   onChange={(e) => setPassword(e.target.value)} value={password}/>
+    <Form.Control type="password" placeholder="write your password again!"   onChange={(e) => setPasswordConfirmation(e.target.value)} value={password_confirm}/>
   </Form.Group>
 
   
