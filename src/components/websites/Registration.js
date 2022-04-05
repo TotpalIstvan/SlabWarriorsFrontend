@@ -14,6 +14,7 @@ export function Registration()  {
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
   const [password_confirm, setPasswordConfirm] = useState("");
+  const [token, setToken] = useState();
   async function signUp() {
     let item = {name, email, password, password_confirm};
     console.warn(item);
