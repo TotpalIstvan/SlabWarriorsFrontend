@@ -12,13 +12,13 @@
         font-weight: bold;
     }
     a {
-        color: white;
+        color: rgb(255, 255, 255);
         margin-bottom: 20px;
         font-size: 18px;
         text-decoration: none;
         &:hover{
             color: green;
-            transition: 200ms ease-in;
+            text-decoration: underline;
         }
     }
 }
