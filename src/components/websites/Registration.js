@@ -39,21 +39,21 @@ export function Registration()  {
 <div className='Registration'>
   
 <Form id='RegisterForm'>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Group className="mb-3" controlId="Name">
 
     <Form.Label className='labelok'>Username:</Form.Label>
     <Form.Control type="text" placeholder="Write a username!"  onChange={(e) => setName(e.target.value)} value={name}/>
   </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicEmail">
+  <Form.Group className="mb-3" controlId="Email">
     <Form.Label className='labelok'>Email address:</Form.Label>
     <Form.Control type="email" placeholder="write an email!"   onChange={(e) => setEmail(e.target.value)} value={email}/>
   </Form.Group>
 
-  <Form.Group className="mb-3" controlId="formBasicPassword">
+  <Form.Group className="mb-3" controlId="Password">
     <Form.Label className='labelok'>Password:</Form.Label>
     <Form.Control type="password" placeholder="write a password!"   onChange={(e) =>setPassword(e.target.value)} value={password}/>
   </Form.Group>
-  <Form.Group className="mb-3" controlId="formBasicPassword">
+  <Form.Group className="mb-3" controlId="PasswordConfirm">
     <Form.Label className='labelok'>Password Confirmation:</Form.Label>
     <Form.Control type="password" placeholder="write your password again!"   onChange={(e) => setPasswordConfirmation(e.target.value)} value={password_confirm}/>
   </Form.Group>
