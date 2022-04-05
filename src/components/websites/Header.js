@@ -13,6 +13,14 @@ import './Header.scss'
   return (
     <div className='Header'>
       <Navbar bg="dark" variant="dark" id='Navbar'>
+         
+            <Navbar.Brand>
+              <img 
+              src='/projekt_logo.png'
+              alt='projektlogo'
+              height="30"/>
+            </Navbar.Brand>
+         
        <Navbar.Toggle aria-controls="navbarScroll" />
      
     <Navbar.Collapse id="navbarScroll">
@@ -46,7 +54,9 @@ import './Header.scss'
             
             </Nav>
             </Navbar.Collapse>
+            
     </Navbar>
+    
     <Outlet />
 
     </div>
