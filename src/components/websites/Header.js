@@ -1,7 +1,6 @@
 import React from 'react';
 import  Navbar  from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import  NavDropdown  from 'react-bootstrap/NavDropdown';
 import { Outlet } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Header.scss'
@@ -31,15 +30,6 @@ import './Header.scss'
       >
         
          <Nav.Link href='MainPage' to="/MainPage">Main Page</Nav.Link>
-         
-        <NavDropdown bg="dark" title="News" id="navbarScrollingDropdown">
-            
-            <NavDropdown.Item href="Updates" to="/Updates">Updates</NavDropdown.Item>
-            
-            
-            <NavDropdown.Item href="Featured" to="/Featured">Featured</NavDropdown.Item>
-            
-        </NavDropdown>
         
             <Nav.Link href="Registration" to="/Registration">Registration</Nav.Link>
             <Nav.Link href="Login" to="/Login">Login</Nav.Link>
@@ -47,8 +37,6 @@ import './Header.scss'
             <Nav.Link href="GameDescription" to="/GameDescription">Game Description</Nav.Link>
             
             <Nav.Link href="Leaderboard" to="/Leaderboard">Leaderboard</Nav.Link>
-            
-            <Nav.Link href="Forum" to="/Forum">Forum</Nav.Link>
             
             <Nav.Link href="DeckRecommendation" to="/DeckRecommendation">Deck Recommender</Nav.Link>
             
