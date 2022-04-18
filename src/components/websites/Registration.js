@@ -20,7 +20,7 @@ const validationSchema = yup.object().shape({
     .string()
     .required("A name is required")
     .min(3, "Name must be at least 3 characters")
-    .max(50),
+    .max(50, "Username shouldn't be more than 50 charcters"),
   email: yup
     .string()
     .email()
@@ -29,8 +29,8 @@ const validationSchema = yup.object().shape({
     .string()
     .required("Please enter your password")
     .matches(
-      /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
-      "Password must contain at least 8 characters, one uppercase, one number and one special case character"
+      /^.*(?=.{8,50})((?=.*[A-Z]){1}).*$/,
+      "Password must contain at least 8 characters with one uppercase letter, but 50 is max"
     )
     .min(8)
     .max(50),
@@ -91,49 +91,49 @@ export function Registration({onSubmit})  {
 <Form id='RegisterForm' onSubmit={formik.handleSubmit}>
 
       <Form.Group className="mb-3" controlId="UsernameField" required>
-    <Form.Label className='labelok' required isinvalid="true">Username:</Form.Label>
+    <Form.Label className='text' required isinvalid="true">Username:</Form.Label>
     <Form.Control type="text" placeholder="Write a username!" value={name}  onChange={(e) => setName(e.target.value)} {...nameProps} required/>
   </Form.Group>
-    <Form.Control.Feedback type="invalid" id='hiba1'>
+   <label>
     {formik.touched.name && formik.errors.name ? (
         <div>{formik.errors.name}</div>
       ) : null}
-  </Form.Control.Feedback>
+      </label>
 
   <Form.Group className="mb-3" controlId="EmailField" required>
-    <Form.Label className='labelok'>Email address:</Form.Label>
+    <Form.Label className='text'>Email address:</Form.Label>
     <Form.Control type="email" placeholder="write an email!" value={email}    onChange={(e) => setEmail(e.target.value)} {...emailProps} required/>
   </Form.Group>
-  <Form.Control.Feedback type="invalid" id='hiba2'>
+  <label>
   {formik.touched.email && formik.errors.email ? (
         <div>{formik.errors.email}</div>
       ) : null}
-    </Form.Control.Feedback>
+    </label>
 
  
   <Form.Group className="mb-3" controlId="PasswordField" required>
-    <Form.Label className='labelok'>Password:</Form.Label>
+    <Form.Label className='text'>Password:</Form.Label>
     <Form.Control type="password" placeholder="write a password!"   onChange={(e) => setPassword(e.target.value)} value={password} {...passwordProps} required/>
   </Form.Group>
-  <Form.Control.Feedback type="invalid" id='hiba3'>
+  <label>
   {formik.touched.password && formik.errors.password ? (
         <div>{formik.errors.password}</div>
       ) : null}
-    </Form.Control.Feedback>
+    </label>
 
  
   <Form.Group className="mb-3" controlId="PasswordConfirmField" required>
-    <Form.Label className='labelok'>Password Confirmation:</Form.Label>
+    <Form.Label className='text'>Password Confirmation:</Form.Label>
     <Form.Control type="password" placeholder="write your password again!"   onChange={(e) => setPasswordConfirm(e)} value={password_confirm} {...passwordconfrimProps} required/>
   </Form.Group>
-  <Form.Control.Feedback type="invalid" id='hiba1'>
+  <label>
   {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
         <div>{formik.errors.confirmPassword}</div>
       ) : null}
-  </Form.Control.Feedback>
+  </label>
   
 
-  <Button variant="primary" type="submit" onClick={ signUp} disabled={!(formik.isValid && formik.dirty)}>
+  <Button variant="primary" type="submit" onClick={ signUp}>
     Register
   </Button>
   <p> Have you already registered? <a href='/Login'>Sign in</a></p>
