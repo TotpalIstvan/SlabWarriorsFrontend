@@ -8,7 +8,6 @@ import DeckRecommendation from './components/websites/DeckRecommendation';
 import GameDescription from './components/websites/GameDescription';
 import Header from './components/websites/Header';
 import Login from './components/websites/Login';
-import Footer from './components/websites/Footer';
 
 
 function App() {
@@ -29,7 +28,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-    <Footer />
+   
     </div>
   );
 }

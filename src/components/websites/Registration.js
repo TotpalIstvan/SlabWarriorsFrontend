@@ -64,6 +64,7 @@ export function Registration({onSubmit})  {
       headers: {
         "Content-Type":'application/json',
         "Accept" : 'application/json'
+        
       }
     })
     result = await result.json();
