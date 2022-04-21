@@ -3,8 +3,10 @@ import  Navbar  from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { Outlet } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Header.scss'
-
+import './Header.scss';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import { FormControl } from 'react-bootstrap';
 
 
  export function Header() {
@@ -39,8 +41,22 @@ import './Header.scss'
             <Nav.Link href="Leaderboard" to="/Leaderboard">Leaderboard</Nav.Link>
             
             <Nav.Link href="DeckRecommendation" to="/DeckRecommendation">Deck Recommender</Nav.Link>
-            
+        
             </Nav>
+            <a href='/'>
+            <img src='/profile_picture.png' alt='profile' height="30">
+            </img>
+            </a>
+            <Form className="d-flex">
+        <FormControl
+          type="search"
+          placeholder="Search"
+          className="me-2"
+          aria-label="Search"
+          id='searching'
+        />
+        <Button variant="outline-success">Search</Button>
+      </Form>
             </Navbar.Collapse>
             
     </Navbar>

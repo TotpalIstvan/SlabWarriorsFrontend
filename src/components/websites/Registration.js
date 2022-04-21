@@ -7,8 +7,9 @@ import * as yup from "yup";
 import { useFormik } from "formik";
 
 
+
 const initialValues = {
-  name: "",
+  username: "",
   age: "",
   email: "",
   password: "",
@@ -16,10 +17,10 @@ const initialValues = {
 };
 
 const validationSchema = yup.object().shape({
-  name: yup
+  username: yup
     .string()
-    .required("A name is required")
-    .min(3, "Name must be at least 3 characters")
+    .required("A username is required")
+    .min(3, "Username must be at least 3 characters")
     .max(50, "Username shouldn't be more than 50 charcters"),
   email: yup
     .string()
@@ -45,31 +46,47 @@ const validationSchema = yup.object().shape({
 
 export function Registration({onSubmit})  {
 
-  
 
-  const [name,setName]=useState("");
+  const [username,setUsername]=useState("");
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
   const [password_confirm, setPasswordConfirm] = useState("");
 
   
   async function signUp() {
-    let item = {name, email, password};
+    let item = {username, email, password};
     console.warn(item);
 
-  let result = await fetch("http://localhost:8000/api/users/register", 
+ fetch("http://localhost:8000/api/users/register", 
     {
+      mode: 'no-cors',
       method: "POST",
       body: JSON.stringify(item),
       headers: {
+        'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Credentials" : true,
         "Content-Type":'application/json',
-        "Accept" : 'application/json'
-        
+        "Accept" : 'application/json',
+       
       }
     })
-    result = await result.json();
-    console.warn( JSON.stringify(result));
+    .then(response => response.json())
+  .then(json => console.log(json))
+    .then(function(response) {                     
+      if(response.ok)
+      {
+        return response.text();         
+      }
 
+      throw new Error('Something went wrong.');
+  })  
+  .then(function(text) {                          
+    console.log('Request successful', text);  
+  })  
+  .catch(function(error) {                       
+    console.log('Request failed', error);
+  });
+  
 
   }
 
@@ -79,7 +96,7 @@ export function Registration({onSubmit})  {
     onSubmit
   });
 
-  const nameProps = formik.getFieldProps("name");
+  const usernameProps = formik.getFieldProps("username");
   const emailProps = formik.getFieldProps("email");
   const passwordProps = formik.getFieldProps("password");
   const passwordconfrimProps = formik.getFieldProps("confirmPassword");
@@ -89,21 +106,21 @@ export function Registration({onSubmit})  {
     
 
 
-<Form id='RegisterForm' onSubmit={formik.handleSubmit}>
+<Form id='RegisterForm' onSubmit={formik.handleSubmit} method="POST">
 
       <Form.Group className="mb-3" controlId="UsernameField" required>
     <Form.Label className='text' required isinvalid="true">Username:</Form.Label>
-    <Form.Control type="text" placeholder="Write a username!" value={name}  onChange={(e) => setName(e.target.value)} {...nameProps} required/>
+    <Form.Control type="text" placeholder="Write a username!"   onChange={(e) => setUsername(e.target.value)} value={username}  {...usernameProps} required/>
   </Form.Group>
    <label>
-    {formik.touched.name && formik.errors.name ? (
-        <div>{formik.errors.name}</div>
+    {formik.touched.username && formik.errors.username ? (
+        <div>{formik.errors.username}</div>
       ) : null}
       </label>
 
   <Form.Group className="mb-3" controlId="EmailField" required>
     <Form.Label className='text'>Email address:</Form.Label>
-    <Form.Control type="email" placeholder="write an email!" value={email}    onChange={(e) => setEmail(e.target.value)} {...emailProps} required/>
+    <Form.Control type="email" placeholder="write an email!"   onChange={(e) => setEmail(e.target.value)} value={email}   {...emailProps} required/>
   </Form.Group>
   <label>
   {formik.touched.email && formik.errors.email ? (
@@ -134,7 +151,7 @@ export function Registration({onSubmit})  {
   </label>
   
 
-  <Button variant="primary" type="submit" onClick={ signUp}>
+  <Button variant="primary" type="button" onClick={ signUp}>
     Register
   </Button>
   <p> Have you already registered? <a href='/Login'>Sign in</a></p>
