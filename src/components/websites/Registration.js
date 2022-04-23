@@ -109,7 +109,7 @@ export function Registration({onSubmit})  {
 <Form id='RegisterForm' onSubmit={formik.handleSubmit} method="POST">
 
       <Form.Group className="mb-3" controlId="UsernameField" required>
-    <Form.Label className='text' required isinvalid="true">Username:</Form.Label>
+    <Form.Label className='formlabel' required isinvalid="true">Username:</Form.Label>
     <Form.Control type="text" placeholder="Write a username!"   onChange={(e) => setUsername(e.target.value)} value={username}  {...usernameProps} required/>
   </Form.Group>
    <label>
@@ -119,7 +119,7 @@ export function Registration({onSubmit})  {
       </label>
 
   <Form.Group className="mb-3" controlId="EmailField" required>
-    <Form.Label className='text'>Email address:</Form.Label>
+    <Form.Label className='formlabel'>Email address:</Form.Label>
     <Form.Control type="email" placeholder="write an email!"   onChange={(e) => setEmail(e.target.value)} value={email}   {...emailProps} required/>
   </Form.Group>
   <label>
@@ -130,7 +130,7 @@ export function Registration({onSubmit})  {
 
  
   <Form.Group className="mb-3" controlId="PasswordField" required>
-    <Form.Label className='text'>Password:</Form.Label>
+    <Form.Label className='formlabel'>Password:</Form.Label>
     <Form.Control type="password" placeholder="write a password!"   onChange={(e) => setPassword(e.target.value)} value={password} {...passwordProps} required/>
   </Form.Group>
   <label>
@@ -141,7 +141,7 @@ export function Registration({onSubmit})  {
 
  
   <Form.Group className="mb-3" controlId="PasswordConfirmField" required>
-    <Form.Label className='text'>Password Confirmation:</Form.Label>
+    <Form.Label className='formlabel'>Password Confirmation:</Form.Label>
     <Form.Control type="password" placeholder="write your password again!"   onChange={(e) => setPasswordConfirm(e)} value={password_confirm} {...passwordconfrimProps} required/>
   </Form.Group>
   <label>
@@ -151,7 +151,7 @@ export function Registration({onSubmit})  {
   </label>
   
 
-  <Button variant="primary" type="button" onClick={ signUp}>
+  <Button variant="primary" type="button" onClick={ signUp} className='registerButton'>
     Register
   </Button>
   <p> Have you already registered? <a href='/Login'>Sign in</a></p>

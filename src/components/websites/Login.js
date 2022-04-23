@@ -14,7 +14,7 @@ export function Login()  {
   const [password,setPassword]=useState("");
   const [email,setEmail]=useState("");
 
-  async function signUp() {
+  async function login() {
     let item = {name, email, password};
     console.warn(item);
 
@@ -37,19 +37,19 @@ export function Login()  {
   
 <Form id='LoginForm'>
       <Form.Group className="mb-3" controlId="username">
-    <Form.Label>Username:</Form.Label>
-    <Form.Control type="text"   onChange={(e) => setName(e.target.value)} value={name}/>
+    <Form.Label className='formlabel'>Username:</Form.Label>
+    <Form.Control type="text"   onChange={(e) => setName(e.target.value)} value={name} required/>
   </Form.Group>
   <Form.Group className="mb-3" controlId="email">
-    <Form.Label>Email address:</Form.Label>
+    <Form.Label className='formlabel'>Email address:</Form.Label>
     <Form.Control type="email"  onChange={(e) => setEmail(e.target.value)} value={email}/>
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="password">
-    <Form.Label>Password:</Form.Label>
+    <Form.Label className='formlabel'>Password:</Form.Label>
     <Form.Control type="password"   onChange={(e) => setPassword(e.target.value)} value={password}/>
   </Form.Group> 
-  <Button variant="primary" type="submit" onClick={ signUp}>
+  <Button variant="primary" type="submit" onClick={ login} className='login'>
     Login
   </Button>
   <p> Don't have an account? <a href='/Registration'>Create one</a></p>

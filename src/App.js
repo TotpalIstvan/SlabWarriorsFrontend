@@ -7,6 +7,7 @@ import Leaderboard from './components/websites/Leaderboard';
 import GameDescription from './components/websites/GameDescription';
 import Header from './components/websites/Header';
 import Login from './components/websites/Login';
+import Characters from './components/websites/Characters';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="Login" element={<Login />} />
           <Route path="GameDescription" element={<GameDescription />} />
           <Route path="Leaderboard" element={<Leaderboard />} />
+          <Route path="Characters" element={<Characters />} />
         </Route>
       </Routes>
     </BrowserRouter>

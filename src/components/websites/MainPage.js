@@ -10,6 +10,9 @@ export function MainPage()  {
 <div  className='MainPage'>
   <h1>Main Page</h1>
 <p id='welcome'>Welcome to our website! If you want to continue you need to <a href='/Registration'>Register</a>!</p>
+<p><a href='/Login'>If you already registered</a></p>
+<p><a href='/GameDescription'>If you want to know more about the game</a></p>
+ <p><a href='/Characters'>The cards</a></p>
 </div>
 
     );

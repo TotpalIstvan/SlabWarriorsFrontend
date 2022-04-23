@@ -19,10 +19,10 @@ class Leaderboard extends Component {
   }
 render()  {
   
-let user = "";
+
 
 if(this.state.loading) {
-  user = <tr><td colSpan="12"> <h2>Loading...</h2> </td></tr>
+  
 } 
 else {
 

@@ -1,6 +1,13 @@
 #LoginForm {
+    border: solid 2px;
+    margin: 20px 400px;
     padding: 30px 20px;
     background-color: white;
     position: relative;
     color: black;
+    text-align: center;
+    width: 1000px;
+    .formlabel {
+        color: black;
+    }
 }

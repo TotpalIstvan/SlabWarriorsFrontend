@@ -40,7 +40,7 @@ import { FormControl } from 'react-bootstrap';
             
             <Nav.Link href="Leaderboard" to="/Leaderboard">Leaderboard</Nav.Link>
             
-            <Nav.Link href="DeckRecommendation" to="/DeckRecommendation">Deck Recommender</Nav.Link>
+            <Nav.Link href="Characters" to="/Characters">Characters</Nav.Link>
         
             </Nav>
             <a href='/'>
