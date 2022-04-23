@@ -5,10 +5,10 @@ import './Leaderboard.scss';
 
 class Leaderboard extends Component {
   state = {
-    students: [],
+    users: [],
     loading: true,
   }
-  async componentDidMount() {
+ async componentDidMount() {
     const response = await axios.get('http://localhost:8000/api/users');
     if(response.data.status === 200) {
       this.setState({
@@ -20,12 +20,31 @@ class Leaderboard extends Component {
 render()  {
   
 
-
+let  users_Table = "";
 if(this.state.loading) {
+  users_Table = <tr><td colSpan={12}><h2>Loading...</h2></td></tr>
   
 } 
 else {
-
+  users_Table =
+  this.state.users.map( (item) => {
+    return(
+    <tr key={item.id}>
+      <td>{item.id}</td>
+      <td>{item.username}</td>
+      <td>{item.email}</td>
+      <td>{item.email_verified_at}</td>
+      <td>{item.password}</td>
+      <td>{item.remember_token}</td>
+      <td>{item.account_number}</td>
+      <td>{item.card_count}</td>
+      <td>{item.fighter_count}</td>
+      <td>{item.level}</td>
+      <td>{item.admin}</td>
+      <td>{item.banned}</td>
+    </tr>
+    );
+    });
 }
     return(
 <div className='Leaderboard'>  
@@ -43,11 +62,11 @@ else {
      <td>fighter_count</td> 
      <td>level</td> 
      <td>admin</td> 
-     <td>banned</td> 
+     <td>banned</td>
          </tr>
        </thead>
        <tbody>
-       
+       {users_Table}
     
        </tbody>
      </table>

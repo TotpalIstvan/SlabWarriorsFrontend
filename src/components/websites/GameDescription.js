@@ -10,9 +10,9 @@ export function GameDescription()  {
   <p><b>Slab Warriors</b> is a turn-based card game,
   where you have to fight on a table which is called Slab.</p>
   <p>
-      The point of the game is to destroy the opponent's deck.
+      The point of the game is to kill the boss.
   </p>
-  <p>
+  
       <h1>Rules</h1>
       <ul>
         <li>
@@ -37,7 +37,7 @@ You can choose up to several of the same cards in the deck, up to a maximum of t
 When you lay down a card, you can't do anything with that card until the next round. If you have other cards of the same suit in the deck, you can play them regardless of this rule.
 </li>
       </ul>
-  </p>
+  
 </div>
     );
    

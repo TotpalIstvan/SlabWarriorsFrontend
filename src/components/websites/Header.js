@@ -43,10 +43,7 @@ import { FormControl } from 'react-bootstrap';
             <Nav.Link href="Characters" to="/Characters">Characters</Nav.Link>
         
             </Nav>
-            <a href='/'>
-            <img src='/profile_picture.png' alt='profile' height="30">
-            </img>
-            </a>
+          
             <Form className="d-flex">
         <FormControl
           type="search"

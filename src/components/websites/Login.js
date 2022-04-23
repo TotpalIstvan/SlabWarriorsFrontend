@@ -14,11 +14,11 @@ export function Login()  {
   const [password,setPassword]=useState("");
   const [email,setEmail]=useState("");
 
-  async function login() {
+   function login() {
     let item = {name, email, password};
     console.warn(item);
 
-  let result = await fetch("http://127.0.0.1:8000/api/users/login", 
+  let result =  fetch("http://127.0.0.1:8000/api/users/login", 
     {
       method: "POST",
       body: JSON.stringify(item),
@@ -27,7 +27,7 @@ export function Login()  {
         "Accept" : 'application/json'
       }
     })
-    result = await result.json();
+    result =  result.json();
     console.warn( JSON.stringify(result));
   }
 
@@ -42,12 +42,12 @@ export function Login()  {
   </Form.Group>
   <Form.Group className="mb-3" controlId="email">
     <Form.Label className='formlabel'>Email address:</Form.Label>
-    <Form.Control type="email"  onChange={(e) => setEmail(e.target.value)} value={email}/>
+    <Form.Control type="email"  onChange={(e) => setEmail(e.target.value)} value={email} required/>
   </Form.Group>
 
   <Form.Group className="mb-3" controlId="password">
     <Form.Label className='formlabel'>Password:</Form.Label>
-    <Form.Control type="password"   onChange={(e) => setPassword(e.target.value)} value={password}/>
+    <Form.Control type="password"   onChange={(e) => setPassword(e.target.value)} value={password} required/>
   </Form.Group> 
   <Button variant="primary" type="submit" onClick={ login} className='login'>
     Login

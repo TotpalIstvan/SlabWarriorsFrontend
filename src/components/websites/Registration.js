@@ -25,10 +25,10 @@ const validationSchema = yup.object().shape({
   email: yup
     .string()
     .email()
-    .required("Email is a required field"),
+    .required("You cannot register without an email address"),
   password: yup
     .string()
-    .required("Please enter your password")
+    .required("You have to give a password")
     .matches(
       /^.*(?=.{8,50})((?=.*[A-Z]){1}).*$/,
       "Password must contain at least 8 characters with one uppercase letter, but 50 is max"
@@ -53,13 +53,12 @@ export function Registration({onSubmit})  {
   const [password_confirm, setPasswordConfirm] = useState("");
 
   
-  async function signUp() {
+  function signUp() {
     let item = {username, email, password};
     console.warn(item);
 
- fetch("http://localhost:8000/api/users/register", 
-    {
-      mode: 'no-cors',
+ fetch("http://localhost:8000/api/users/", 
+    { mode: 'no-cors',
       method: "POST",
       body: JSON.stringify(item),
       headers: {
@@ -108,9 +107,9 @@ export function Registration({onSubmit})  {
 
 <Form id='RegisterForm' onSubmit={formik.handleSubmit} method="POST">
 
-      <Form.Group className="mb-3" controlId="UsernameField" required>
-    <Form.Label className='formlabel' required isinvalid="true">Username:</Form.Label>
-    <Form.Control type="text" placeholder="Write a username!"   onChange={(e) => setUsername(e.target.value)} value={username}  {...usernameProps} required/>
+      <Form.Group className="mb-3" controlId="UsernameField">
+    <Form.Label className='formlabel'  isinvalid="true">Username:</Form.Label>
+    <Form.Control type="text" placeholder="Write a username!" value={username}   onChange={(e) => setUsername(e.target.value)}   {...usernameProps} required/>
   </Form.Group>
    <label>
     {formik.touched.username && formik.errors.username ? (
@@ -118,9 +117,9 @@ export function Registration({onSubmit})  {
       ) : null}
       </label>
 
-  <Form.Group className="mb-3" controlId="EmailField" required>
+  <Form.Group className="mb-3" controlId="EmailField" >
     <Form.Label className='formlabel'>Email address:</Form.Label>
-    <Form.Control type="email" placeholder="write an email!"   onChange={(e) => setEmail(e.target.value)} value={email}   {...emailProps} required/>
+    <Form.Control type="email" placeholder="write an email!" value={email}  onChange={(e) => setEmail(e.target.value)}    {...emailProps} required/>
   </Form.Group>
   <label>
   {formik.touched.email && formik.errors.email ? (
@@ -129,9 +128,9 @@ export function Registration({onSubmit})  {
     </label>
 
  
-  <Form.Group className="mb-3" controlId="PasswordField" required>
+  <Form.Group className="mb-3" controlId="PasswordField" >
     <Form.Label className='formlabel'>Password:</Form.Label>
-    <Form.Control type="password" placeholder="write a password!"   onChange={(e) => setPassword(e.target.value)} value={password} {...passwordProps} required/>
+    <Form.Control type="password" placeholder="write a password!" value={password}   onChange={(e) => setPassword(e.target.value)}  {...passwordProps} required/>
   </Form.Group>
   <label>
   {formik.touched.password && formik.errors.password ? (
@@ -140,9 +139,9 @@ export function Registration({onSubmit})  {
     </label>
 
  
-  <Form.Group className="mb-3" controlId="PasswordConfirmField" required>
+  <Form.Group className="mb-3" controlId="PasswordConfirmField">
     <Form.Label className='formlabel'>Password Confirmation:</Form.Label>
-    <Form.Control type="password" placeholder="write your password again!"   onChange={(e) => setPasswordConfirm(e)} value={password_confirm} {...passwordconfrimProps} required/>
+    <Form.Control type="password" placeholder="write your password again!" value={password_confirm}   onChange={(e) => setPasswordConfirm(e)}  {...passwordconfrimProps} required/>
   </Form.Group>
   <label>
   {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
