@@ -193,7 +193,7 @@ export function Characters()  {
     <Card.Title>Yargol</Card.Title>
 
 <Card.Text> Type: Orc boss</Card.Text>
-<Card.Text>Ability: </Card.Text>
+<Card.Text>Ability: He is the enemy</Card.Text>
 <Card.Text>Stats: </Card.Text>
 <ul>
         <li>level: 1</li>
