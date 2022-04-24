@@ -143,8 +143,8 @@ else {
     <Form.Control type="password" placeholder="write your password again!" value={password_confirm}   onChange={(e) => setPasswordConfirm(e)}  {...passwordconfrimProps} required/>
   </Form.Group>
   <label>
-  {formik.touched.confirmPassword && formik.errors.confirmPassword ? (
-        <div>{formik.errors.confirmPassword}</div>
+  {formik.touched.password_confirm && formik.errors.password_confirm ? (
+        <div>{formik.errors.password_confirm}</div>
       ) : null}
   </label>
   
