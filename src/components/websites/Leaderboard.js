@@ -10,27 +10,7 @@ class Leaderboard extends Component {
   }
  async componentDidMount() {
     const response = await axios.get('http://localhost:8000/api/users')
-    .catch(function (error) {
-      if (error.response) {
-        
-        console.log(error.response.data);
-        console.log(error.response.status);
-        console.log(error.response.headers);
-      } else if (error.request) {
-        
-        console.log(error.request);
-      } else {
-        
-        console.log('Error', error.message);
-      }
-  ;
-    if(response.data.status === 200) {
-      this.setState({
-        users: response.data.users,
-        loading: false,
-      })
-    }
-  });
+    console.log(response)
   }
 render()  {
   
