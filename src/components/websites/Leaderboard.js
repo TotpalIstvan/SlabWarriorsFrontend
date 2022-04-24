@@ -9,20 +9,35 @@ class Leaderboard extends Component {
     loading: true,
   }
  async componentDidMount() {
-    const response = await axios.get('http://localhost:8000/api/users');
+    const response = await axios.get('http://localhost:8000/api/users')
+    .catch(function (error) {
+      if (error.response) {
+        // Request made and server responded
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+      } else if (error.request) {
+        // The request was made but no response was received
+        console.log(error.request);
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.log('Error', error.message);
+      }
+  ;
     if(response.data.status === 200) {
       this.setState({
         users: response.data.users,
         loading: false,
       })
     }
+  });
   }
 render()  {
   
 
 let  users_Table = "";
 if(this.state.loading) {
-  users_Table = <tr><td colSpan={12}><h2>Loading...</h2></td></tr>
+  users_Table = <tr><td colSpan={12} ><h2 color='white'>Loading...</h2></td></tr>
   
 } 
 else {

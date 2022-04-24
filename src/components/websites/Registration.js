@@ -10,10 +10,9 @@ import { useFormik } from "formik";
 
 const initialValues = {
   username: "",
-  age: "",
   email: "",
   password: "",
-  confirmPassword: ""
+  password_confirm: ""
 };
 
 const validationSchema = yup.object().shape({
@@ -35,7 +34,7 @@ const validationSchema = yup.object().shape({
     )
     .min(8)
     .max(50),
-  confirmPassword: yup
+  password_confirm: yup
     .string()
     .required("Please confirm your password")
     .when("password", {
@@ -53,16 +52,15 @@ export function Registration({onSubmit})  {
   const [password_confirm, setPasswordConfirm] = useState("");
 
   
-  function signUp() {
-    let item = {username, email, password};
+   function signUp() {
+    let item = {username, email};
     console.warn(item);
 
- fetch("http://localhost:8000/api/users/", 
-    { mode: 'no-cors',
+ fetch("http://localhost:8000/api/users/register", 
+    {mode:'no-cors',
       method: "POST",
       body: JSON.stringify(item),
       headers: {
-        'Access-Control-Allow-Origin': '*',
         "Access-Control-Allow-Credentials" : true,
         "Content-Type":'application/json',
         "Accept" : 'application/json',
@@ -76,8 +74,9 @@ export function Registration({onSubmit})  {
       {
         return response.text();         
       }
-
+else {
       throw new Error('Something went wrong.');
+    }
   })  
   .then(function(text) {                          
     console.log('Request successful', text);  
@@ -98,9 +97,9 @@ export function Registration({onSubmit})  {
   const usernameProps = formik.getFieldProps("username");
   const emailProps = formik.getFieldProps("email");
   const passwordProps = formik.getFieldProps("password");
-  const passwordconfrimProps = formik.getFieldProps("confirmPassword");
+  const passwordconfrimProps = formik.getFieldProps("password_confirm");
 
-
+  
     return(
     
 

@@ -15,15 +15,16 @@ export function Login()  {
   const [email,setEmail]=useState("");
 
    function login() {
-    let item = {name, email, password};
+    let item = {name, email};
     console.warn(item);
 
   let result =  fetch("http://127.0.0.1:8000/api/users/login", 
     {
+      mode:'no-cors',
       method: "POST",
       body: JSON.stringify(item),
       headers: {
-        "Content-Type":'application/json',
+       "Content-Type":'application/json',
         "Accept" : 'application/json'
       }
     })
@@ -35,7 +36,7 @@ export function Login()  {
       
 <div className='Login'>
   
-<Form id='LoginForm'>
+<Form id='LoginForm' method='POST'>
       <Form.Group className="mb-3" controlId="username">
     <Form.Label className='formlabel'>Username:</Form.Label>
     <Form.Control type="text"   onChange={(e) => setName(e.target.value)} value={name} required/>
