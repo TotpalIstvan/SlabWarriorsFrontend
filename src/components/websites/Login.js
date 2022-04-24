@@ -18,7 +18,7 @@ export function Login()  {
     let item = {name, email};
     console.warn(item);
 
-  let result =  fetch("http://127.0.0.1:8000/api/users/login", 
+  let result =  fetch("http://127.0.0.1:8000/api/users/", 
     {
       mode:'no-cors',
       method: "POST",
